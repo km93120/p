@@ -15,7 +15,7 @@ class Units
   get isWounded()
   {
     return this.isWounded_;
-    delete this;
+   
   }
 
 
