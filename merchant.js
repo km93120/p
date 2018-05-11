@@ -1,54 +1,50 @@
-class Merchant
-{
-    constructor()
-    {
-     this.isAway = false;
+class Merchant {
 
-     this.haveGold = 0;
+    constructor(isAway, haveGold) {
+        this.isAway = false;
+
+        this.haveGold = 0;
     }
 
-    get isAway()
-    {
+    get isAway() {
         return this.isAway;
     }
 
-    sendAway()
-    {
+    get haveGold() {
+        return this.haveGold;
+    }
+
+    sendAway() {
         this.isAway = true;
         this.haveGold = 20;
 
         let i = Math.random();
 
-        if(i < 0.1)
-        {
+        if (i < 0.1) {
             console.log("Le marchand a été attaqué :(");
             this.haveGold = 0;
 
-            return();
+            returnm;
         }
-        else if(i < 0.5)
-        {
+        else if (i < 0.5) {
             console.log("Le marchand a perdu de l'argent");
             this.haveGold = 10;
 
-            return();
+            returnm;
         }
-        else
-        {
+        else {
             console.log("Le marchand a gagné de l'argent :)");
             this.haveGold = 30;
 
-            return();
+            returnm;
         }
     }
 
-    return()
-    {
+    returnm() {
         this.isAway = false;
+
         this.haveGold = 0;
     }
-
-
 }
 
 module.exports = {Merchant};
