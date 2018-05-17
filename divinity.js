@@ -1,4 +1,4 @@
-const EventEmitter = require ('events');
+const EventEmitter = require('events');
 
 
 class Divinity {
@@ -26,6 +26,7 @@ class Divinity {
 
       if (Math.random() > 0.99) {
         this.worldEvents.emit('retribution', Math.floor(10000 * Math.random()));
+        0;
       }
     }, this.timeFactor);
   }
@@ -86,12 +87,3 @@ class Divinity {
 }
 
 module.exports = {Divinity};
-
-
-//unites
-//villes
-//divinites
-//
-
-
-

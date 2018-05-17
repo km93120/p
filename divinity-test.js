@@ -1,6 +1,12 @@
-const chai = require('chai') ;
+
+
+const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const {Divinity} = require('../divinity');
+const sinon = require('sinon');
+const stub = sinon.stub();
+
+
+const {Divinity} = require('C:\\Users\\alexa\\WebstormProjects\\Projet\\divinity');
 
 chai.use(chaiAsPromised);
 chai.should();
@@ -138,4 +144,20 @@ describe('world-worldEvents_.js', () => {
       });
     });
   });
+
+ /* describe.only('azeazeazea', () => {
+    let stub;
+    before(() => {
+      stub = sinon.stub(Math, 'random').returns(0.999);
+    });
+
+    after(() => {
+      stub.restore();
+    });
+
+    it('should aze', () => {
+      const d = new Divinity(1);
+      Divinity.qsd();
+    });
+  });*/
 });

@@ -1,21 +1,23 @@
-class dieu {
-    constructor(isPleased)
-    {
-        this.isPleased = 2;
-    }
+class Dieu {
+	constructor(isPleased) {
+		this.isPleased = 2;
+	}
 
-    get isPleased()
-    {
-        return this.isPleased;
-    }
+	get isPlease() {
+		return this.isPleased;
+	}
 
-    PleaseGod() {
-        this.isPleased = this.isPleased + 1;
-    }
+	set isPleased(ispleased) {
+		this._isPleased = ispleased;
+	}
 
-    DispleaseGod() {
-        this.isPleased = this.isPleased - 1;
-    }
+	pleaseGod() {
+		this.isPleased += 1;
+	}
+
+	displeaseGod() {
+		this.isPleased -= 1;
+	}
 }
 
 module.exports = {Dieu};
