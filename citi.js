@@ -106,10 +106,21 @@ class City {
 
 	static fight_(x) {
 		const i = Math.random();
+		let l = 0;
+		let survivant = 0;
 
 		if (i > 0.5) {
 			console.log('vous avez perdu des hommes');
-			return x / 2;
+			for (l = 0; l <= Listunit.length; l++) {
+				const j = Math.random();
+				if (j < 0.2) {
+					Listunit[l].remote();
+				} else {
+					survivant = 5;
+					x += survivant;
+				}
+			}
+			return x;
 		}
 		if (i <= 0.5) {
 			console.log('vous n\'avez rencontré perssonne');
@@ -122,8 +133,8 @@ class City {
 
 		if (x > incompetence) {
 			console.log('vous avez recruté des troupes');
-			let Unit = new Unit(false, false);
-			Listunit.recruter(Unit);
+			const unit = new Unit(false, false);
+			Listunit.recruter(unit);
 			return 10;
 		}
 		if (x <= incompetence) {
@@ -149,7 +160,8 @@ class City {
 	}
 
 	get power() {
-		for(i = 0; i <= Listunit_.size; i++) {
+		let i = 0;
+		for (i = 0; i <= Listunit_.size; i++) {
 			power_ += 10;
 		}
 		return this.power_;

@@ -1,10 +1,6 @@
 const {Unit} = require('./unit.js');
 
 class Listunit {
-	constructor() {
-
-	}
-
 	recruter(unit) {
 		return new Promise((resolve, reject) => {
 			if (typeof unit === Unit) {
@@ -12,7 +8,7 @@ class Listunit {
 				resolve();
 			} else {
 				reject(new Error(
-					'Vous n\'etes pas un homme !'
+					'Vous n\'etes pas un homme, vous etes un reptilien !'
 				));
 			}
 		});

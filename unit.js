@@ -1,7 +1,7 @@
 class Unit {
 	constructor(isWounded, isDead) {
-		this.isWounded_ = false;
-		this.isDead_ = false;
+		this.isWounded_ = isWounded;
+		this.isDead_ = isDead;
 	}
 
 	init() {
@@ -9,11 +9,11 @@ class Unit {
 	}
 
 	get isWounded() {
-		return this.isWounded;
+		return this.isWounded_;
 	}
 
 	get isDead() {
-		return this.isDead;
+		return this.isDead_;
 	}
 }
 

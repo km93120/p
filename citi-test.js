@@ -17,6 +17,25 @@ describe('Divinity', () => {
 		g.gold.should.be.equal(1000);
 
 		await c.sendMerchant(100);
-		g.gold.should.be.equal(1000);
+		g.gold.should.be.equal(1020);
+
+		await c.sendMerchant(1000);
+		g.gold.should.be.equal(1200);
+
+		await c.sendMerchant(-1);
+		g.gold.should.be.equal(0);
+	});
+
+	it('should send some soldiers', async () => {
+		c.power.should.be.equal(1000);
+
+		await c.sendTroops(100);
+		g.gold.should.be.equal(1020);
+
+		await c.sendMerchant(1000);
+		g.gold.should.be.equal(1200);
+
+		await c.sendMerchant(-1);
+		g.gold.should.be.equal(0);
 	});
 });

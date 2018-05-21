@@ -10,4 +10,20 @@
     "prompt": "^1.0.0",
     "vorpal": "^1.12.0"
   }
+  
+  "xo": {
+    "envs": [
+      "node" //je travaille sur du node
+    ],
+    "space": 2, //identation avec 2 espaces
+    "rules": {
+      "max-len": [ //chaque ligne fait 80 colonnes
+        "error",
+        80, // limiter le nombre de lignes a 80
+        2
+      ]
+    }
+  }
+  
 }
+
