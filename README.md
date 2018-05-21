@@ -6,6 +6,6 @@
 # Celui ci implemente les decisions du dieu pour les ressources de la cité dans le init()
 # De plus, il contient des fonctions permettant notamment d'envoyer un marchand à l'etranger 
 # Celui-ci retire une certaine quantité d'argent de la ville et possede une chance sur deux de rapporter plus d'argent, une sur 10 de tout perdre
-# Le joueur peut également choisir de lancer un raid, il a alors une chance sur deux de perdre des hommes (sa puissance est divisé par deux)
+# Le joueur peut également choisir de lancer un raid, il a alors une chance sur deux de perdre des hommes (ses unités peuvent perdre la moitié de leurs hommes, ou bien disparaitre completement)
 # De plus, une valeur aleatoire est crée, representant la defense de la ville, si l'armée envoyé est plus puissante, alors elle peut piller la ville, et rapporte des golds
 # Enfin, le joueur peut recruter des hommes en donnant de l'argent, si cette quantité depasse une valeur aleatoire representant l'ivrognerie des habitants de la ville, alors, il recrute une unité
