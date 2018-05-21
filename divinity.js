@@ -26,7 +26,6 @@ class Divinity {
 
       if (Math.random() > 0.99) {
         this.worldEvents.emit('retribution', Math.floor(10000 * Math.random()));
-        0;
       }
     }, this.timeFactor);
   }

@@ -3,10 +3,11 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const sinon = require('sinon');
-const stub = sinon.stub();
+// const stub = sinon.stub();
 
 
-const {Divinity} = require('C:\\Users\\alexa\\WebstormProjects\\Projet\\divinity');
+const {Divinity} = require('C:\\Users\\alexa\\WebstormProjects\\Projet\\app\\divinity.js');
+const {City} = require('C:\\Users\\alexa\\WebstormProjects\\Projet\\app\\citi.js');
 
 chai.use(chaiAsPromised);
 chai.should();
@@ -18,7 +19,9 @@ describe('world-worldEvents_.js', () => {
 
     before(() => {
       g = new Divinity('test', 1);
+      c = new City('The City', 1);
       g.init();
+      c.init();
     });
 
     after(() => {
